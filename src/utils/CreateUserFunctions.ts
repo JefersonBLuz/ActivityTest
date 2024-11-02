@@ -19,6 +19,7 @@ function hasLowerCase(password: string): boolean {
 function hasEightChar(password: string): boolean {
     return password.length >= 8
 }
+
 // async function verificarEmailExiste(email: string, ): boolean {
 //     try {
 //         const user = await User.findOne({ email });
@@ -29,4 +30,9 @@ function hasEightChar(password: string): boolean {
 //     }
 // }
 
-export { hasEightChar, hasLowerCase, hasNumber, hasUpperCase, veriftPassword }
+function validateEmail(email: string) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+export { hasEightChar, hasLowerCase, hasNumber, hasUpperCase, veriftPassword, validateEmail }

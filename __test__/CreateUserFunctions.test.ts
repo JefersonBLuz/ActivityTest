@@ -1,4 +1,4 @@
-const {veriftPassword, hasNumber, hasUpperCase, hasLowerCase, hasEightChar} =  require ('../src/utils/CreateUserFunctions')
+const {veriftPassword, hasNumber, hasUpperCase, hasLowerCase, hasEightChar, validateEmail} =  require ('../src/utils/CreateUserFunctions')
 
 describe ("Testing function veriftPassword", () => {
     it("Check if password is the same passwordConfirmation", () => {
@@ -20,10 +20,10 @@ describe ("Testing function hasNumber",() =>{
 
 describe("Testing function hasUpperCase", () => {
     it("Check if password has upper case", () => {
-        expect(hasUpperCase ("ABC")).toBe(false)
+        expect(hasUpperCase ("ABC")).toBe(true)
     })
     it('Check if passsword has upper case', () => {
-        expect(hasUpperCase("Abc")).toBe(false)
+        expect(hasUpperCase("Abc")).toBe(true)
     })
     it("Check if password has upper case", () => {
         expect(hasUpperCase("abc")).toBe(false)
@@ -53,3 +53,13 @@ describe ("Testing function hasEightChar", () => {
         expect(hasEightChar("12345678910")).toBe(true)
     })
 })
+
+describe ("Testing function validateEmail", () => {
+    it("Check email validation", () => {
+        expect(validateEmail('rafael@mail.com')).toBe(true)
+    })
+    it("Check email validation", () => {
+        expect(validateEmail('rafael.mail.com')).toBe(false)
+    })
+})
+
