@@ -1,0 +1,14 @@
+
+<div>
+    {{#each orders}}
+        <h1>Produto {{id}}</h1>
+        <span>{{entregue.name}}</span>-<span>  {{entregue.data}}</span><br>
+        <span>{{acaminho.name}}</span>-<span>  {{acaminho.data}}</span><br>
+        <span>{{nadistribuidora.name}}</span>-<span>  {{nadistribuidora.data}}</span><br>
+        <span>{{emtransito.name}}</span>-<span>  {{emtransito.data}}</span><br>
+        <span>{{saiuDestino.name}}</span>-<span>  {{saiuDestino.data}}</span><br>
+        <span>{{embarcado.name}}</span>-<span>  {{embarcado.data}}</span><br>
+        <span>{{preaparaco.name}}</span>-<span>  {{preaparaco.data}}</span><br>
+        <span>{{separacao.name}}</span>-<span>  {{separacao.data}}</span><br>
+    {{/each}}
+</div>

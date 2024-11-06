@@ -9,12 +9,12 @@ class App {
 
     constructor() {
         this.server;
+        this.session();
         this.layout();
         this.static();
         this.urlencoded();
         this.middleware();
-        this.session();
-        this.checkSession()
+        // this.checkSession();
         this.router();
     }
     layout() {
@@ -45,7 +45,7 @@ class App {
             secret: 'secret-key',
             resave: false,
             saveUninitialized: false,
-            cookie: { maxAge: 10 * 60 * 1000 } // 10 Minutos
+            cookie: { maxAge: 1 * 60 * 60 * 1000 } // 10 Minutos
         }));
     }
     checkSession() {

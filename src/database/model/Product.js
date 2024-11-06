@@ -21,8 +21,8 @@ const products = db.sequelize.define('products', {
 products.sync({ force: true });
 setTimeout (()=>{
 products.create({ idProduct: "MONITOR21", value: 600, img: "MONITOR21.png", nameProduct: "Monitor 21\"", description: "Monitor de 21 polegadas - 60Hz - HDMI/VGA" })
-products.create({ idProduct: "MONITOR24", value: 1.100, img: "MONITOR24.png", nameProduct: "Monitor 24\"", description: "Monitor de 24 polegadas - Borda infinita - 144Hz - HDMI/DisplayPort" })
-products.create({ idProduct: "MONITORCURVO", value: 3.500, img: "MONITORCURVO.png", nameProduct: "Monitor 29\" Curvo", description: "Monitor de 29 poelgadas - Curvo - Borna infinita - 75Hz - HDMI/DisplayPort" })
+products.create({ idProduct: "MONITOR24", value: 1100, img: "MONITOR24.png", nameProduct: "Monitor 24\"", description: "Monitor de 24 polegadas - Borda infinita - 144Hz - HDMI/DisplayPort" })
+products.create({ idProduct: "MONITORCURVO", value: 3500, img: "MONITORCURVO.png", nameProduct: "Monitor 29\" Curvo", description: "Monitor de 29 poelgadas - Curvo - Borna infinita - 75Hz - HDMI/DisplayPort" })
 products.create({ idProduct: "MOUSE1A", value: 350, img: "MOUSE1A.png", nameProduct: "Mouse Gamer RedDragon", description: "Mouse Gamer RedDragon - 800dpi~3500dpi - RGB" })
 products.create({ idProduct: "MOUSE2A", value: 70, img: "MOUSE2A.png", nameProduct: "Mouse Simples", description: "Mouse Simples Escritório - 800dpi" })
 products.create({ idProduct: "MOUSE3A", value: 110, img: "MOUSE3A.png", nameProduct: "Mouse S/ Fio", description: "Mouse Sem Fio Escritório - 800dpi" })
